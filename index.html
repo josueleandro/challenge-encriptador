@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::: Encriptador de Texto ::</title>
+    <script src="js/logica.js"></script>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+<body>
+    <div class="main">
+        <div id="cifrar">
+            <textarea id="textoCifrar" class="textoCifrar" minlength="40" placeholder="Ingresa el Texto Aqui para cifrar o descifrar..."></textarea>
+            <div id="condiciones" class="condiciones">Solo letras minusculas y sin acento</div>
+            <div id="botones" class="botones">
+                <button class="cifrar" onclick="cifrar()">Encriptar Texto</button>
+                <button class="descifrar" onclick="descifrar()">Desencriptar Texto</button>
+            </div>
+        </div>
+        
+        <div id="resultado" class="resultado">
+            <img src="resources/imagen01.png" alt="">
+            <div id="texto-cifrado" class="texto-cifrado">
+                <label id="textoCifrado" class="textoCifrado">Ningun mensaje fue encontrado</label>
+                <p>Ingresa el texto a cifrar o descifrar</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
