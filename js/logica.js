@@ -1,5 +1,5 @@
 
-const expresion = "^[a-z]+$";
+const expresion = "^[a-z ]+$";
 const version = 1;
 
 function cifrar(){
