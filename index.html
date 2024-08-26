@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>::: Encriptador de Texto ::</title>
-    <script src="js/logica.js"></script>
+    <title>::: Encriptador de Texto :::</title>
     <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="shortcut icon" href="./resources/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <div class="main">
-        <div id="cifrar">
-            <textarea id="textoCifrar" class="textoCifrar" minlength="40" placeholder="Ingresa el Texto Aqui para cifrar o descifrar..."></textarea>
-            <div id="condiciones" class="condiciones">Solo letras minusculas y sin acento</div>
-            <div id="botones" class="botones">
-                <button class="cifrar" onclick="cifrar()">Encriptar Texto</button>
-                <button class="descifrar" onclick="descifrar()">Desencriptar Texto</button>
-            </div>
+<div class="container">
+    <div class="encriptar">
+        <div class="head"><p><i class="fa-brands fa-amilia"></i></p></div>
+        <textarea name="texto" id="texto" class="texto" cols="30" rows="10" placeholder="Ingresa el Texto Aqui para Cifrar o Descifrar"></textarea>
+        <div class="terminos">
+            <i class="fa-solid fa-bell"></i><p id="parrafoAlert">Solo letras minusculas y sin acentos</p>
         </div>
-        
-        <div id="resultado" class="resultado">
-            <img src="resources/imagen01.png" alt="">
-            <div id="texto-cifrado" class="texto-cifrado">
-                <label id="textoCifrado" class="textoCifrado">Ningun mensaje fue encontrado</label>
-                <p>Ingresa el texto a cifrar o descifrar</p>
-            </div>
+        <div class="botones">
+            <button class="btn-cifrar" onclick="cifrar()">Encriptar Texto</button>
+            <button class="btn-descifrar" onclick="descifrar()">Desencriptar Texto</button>
+        </div>
+        <div class="pie">
+            <h2>Desarrollado por JLGS <i class="fa-regular fa-copyright"></i></h2>
+            <p>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </p>
+            
         </div>
     </div>
+    <div class="encriptado">
+        <img class="imagen" src="resources/sinEncriptar.png" alt="" id="imagen">
+        
+        <div class="mensaje-encriptado">
+            <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2><p id="textoModificado" class="textoModificado"></p>
+            <p id="parrafo">Ingrese el texto que deseas encriptar o desencriptar</p>
+        </div>
+        <div id="div-btn-copiarpegar" class="div-btn-copiarpegar">
+            <button  id="btn-copiar" class="btn-copiar" onclick="copiar()">Copiar</button>
+            <button  id="btn-pegar" class="btn-pegar" onclick="pegar()">Pegar</button>
+        </div>
+    </div>
+</div>
+<script src="js/logica.js"></script>
 </body>
 </html>

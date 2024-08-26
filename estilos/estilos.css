@@ -13,9 +13,9 @@
 .texto {
     position: absolute;
     width: 40%;
-    height: 60%;
+    height: 65%;
     left: 10%;
-    top: 15%;
+    top: 5%;
     border: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: normal;
@@ -44,7 +44,7 @@
     position: absolute;
     width: 80%;
     left: 10%;
-    top: 80%;
+    top: 71%;
     font-size: 12px;
     opacity: 0.8;
 
@@ -71,7 +71,7 @@
     position: absolute;
     width: 70%;
     left: 10%;
-    top: 82%;
+    top: 72%;
     gap: 20px;
 }
 
@@ -91,6 +91,35 @@
     border: 1px solid #343A40;
 }
 
+.pie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 0;
+    position: absolute;
+    width: 35%;
+    left: 10%;
+    top: 85%;
+    gap: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:  #495057;
+}
+
+.pie p a {
+    padding: 8px;
+    color: #343A40;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 3%;
+    padding: 3px;
+    position: absolute;
+    top: 3%;
+}
+
 .btn-descifrar {
     align-items: flex-start;
     justify-content: center;
@@ -104,7 +133,7 @@
     display: flex;
     flex-direction: row;
     border: 1px solid #343A40;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     text-align: center;
     line-height: 19px;
@@ -178,6 +207,41 @@
     mix-blend-mode: multiply;
 }
 
+.div-btn-copiarpegar {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    top: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1% 0;
+    gap: 10px;
+}
+
+.btn-copiar, .btn-pegar {
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 8px;
+    background-color: #343A40;
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: white;
+    border: 1px solid #343A40;
+    height: 40%;
+    width: 80%;
+}
+
+.btn-copiar:hover {
+    margin: 0.4%;
+    width: 70%;
+    padding: 1.0%;
+}
+
 @media (max-width: 57.5em) {
     .container{
         display: flex;
@@ -209,11 +273,13 @@
         left: 10%;
         top: 70%;
         gap: 20px;
+        font-size: 10px;
     }
 
     .btn-cifrar, .btn-descifrar {
         width: 50%;
         border-radius: 16px;
+        font-size: 10px;
     }
 
     .btn-cifrar:hover, .btn-descifrar:hover {
@@ -224,9 +290,9 @@
 
     .encriptado {
         width: 80%;
-        height: 15%;
+        height: 9%;
         left: 10%;
-        top: 80%;
+        top: 78%;
     }
 
     .mensaje-encriptado {
@@ -238,6 +304,35 @@
         top: 0;
         display: none;
         visibility: hidden;
+    }
+
+    .pie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1% 0;
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        top: 92%;
+        gap: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:  #495057;
+    }
+    
+    .pie p a {
+        padding: 8px;
+        color: #343A40;
+    }
+    
+    .head {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 3%;
+        padding: 3px;
+        position: absolute;
+        top: 3%;
     }
 
 
@@ -293,9 +388,9 @@
 
     .encriptado {
         width: 80%;
-        height: 12%;
+        height: 8%;
         left: 10%;
-        top: 80%;
+        top:78%;
     }
 
     .mensaje-encriptado {
@@ -315,6 +410,39 @@
         top: 0;
         display: none;
         visibility: hidden;
+    }
+
+    .pie {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1% 0;
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        top: 88%;
+        gap: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:  #495057;
+    }
+
+    .pie h2 {
+        font-size: 12px;
+    }
+    
+    .pie p a {
+        padding: 8px;
+        color: #343A40;
+    }
+    
+    .head {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        height: 3%;
+        padding: 3px;
+        position: absolute;
+        top: 3%;
     }
 
 }
