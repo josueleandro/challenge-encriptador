@@ -1,37 +1,74 @@
-const patron = "!@#$%^&*()_)(*&$#@225+_(7653";
+const expresion = "^[a-z]+$";
 
 function cifrar(){
-    let textoACifrar = document.getElementById('textoCifrar').value;
+    let texto = document.getElementById('texto').value;
+    let tituloMensaje = document.getElementById('titulo-mensaje');
+    let parrafo = document.getElementById("parrafo");
+    let imagen = document.getElementById("imagen");
     
-    let i=0,N=0;
-    let ValorEntero = 0;
     let textoCifrado = "";
-    
-    
-    let elementoResponse = document.getElementById('textoCifrado');
-    
-    for(i=0; i < textoACifrar.length; i++){
-        N = i+1;
-        ValorEntero = (textoACifrar.substring(i,N)).charCodeAt(0) + "2";
-        textoCifrado += String.fromCharCode(ValorEntero);
+
+    if(document.getElementById('texto').value.length != 0){
+        //Usuario ingreso algun texto se valida condicion de solo minusculas
+        let reg = new RegExp(expresion);
+        if(!texto.match(reg)){
+            document.getElementById("parrafoAlert")
+            alert("Solo letras minusculas y sin acentos");
+            return;
+        }
+        let indice1=0,indice2=0;
+        let ValorEntero=0, llave = 10;
+        
+		for (indice1 = 0; indice1 < texto.length; indice1++){
+		    indice2=indice1+1;
+            ValorEntero = (texto.substring(indice1,indice2)).charCodeAt(0) + llave;
+            textoCifrado = textoCifrado + String.fromCharCode(ValorEntero);
+        }
+
+        document.getElementById('texto').value = textoCifrado;
+        tituloMensaje.textContent = "";
+        parrafo.textContent + "";
+        imagen.src = "./encriptado.png";
+        texto = textoCifrado;
+        tituloMensaje.textContent = "Texto encriptado con exito";
+        parrafo.textContent = "";
+        imagen.src = "./resources/encriptado.png"
     }
-    alert(textoCifrado);
-    
-    elementoResponse.innerHTML = textoCifrado;
-    elementoResponse.style.visibility = 'visible';
-    
+    else{
+        imagen.src = "./resources/sinEncriptar.png";
+        tituloMensaje.textContent = "Ningun mensaje encontrado";
+        parrafo.textContent = "Ingrese el texto que deseas encriptar o desencriptar";
+        alert("Debes ingresar un texto");
+    }
 }
 
 function descifrar(){
-    let textoCifrado = document.getElementById('textoCifrar').value;
-    alert(textoCifrado.value);
+    let texto = document.getElementById('texto').value;
+    let tituloMensaje = document.getElementById('titulo-mensaje');
+    let parrafo = document.getElementById("parrafo");
+    let imagen = document.getElementById("imagen");
+    //alert(textoCifrado.value);
     let textoPlano = "";
 
-    let elementoResponse = document.getElementById('textoCifrado');
-    for(i=0; i < textoCifrado.length; i++){
-        textoPlano += textoCifrado.charCodeAt(i)-10;
+    if(texto.length != 0){
+        let indice1=0,indice2=0;
+        let ValorEntero=0, llave = 10;
+        
+		for (indice1 = 0; indice1 < texto.length; indice1++){
+		    indice2=indice1+1;
+            ValorEntero = (texto.substring(indice1,indice2)).charCodeAt(0) - llave;
+            textoPlano = textoPlano + String.fromCharCode(ValorEntero);
+        }
+
+        document.getElementById("texto").value = textoPlano;
+        tituloMensaje.textContent = "Texto desencriptado con Exito";
+        parrafo.textContent = "";
+        imagen.src = "./resources/sinEncriptar.png";
     }
-    alert(textoPlano);
-    elementoResponse.innerHTML = textoPlano;
-    elementoResponse.style.visibility = 'visible';
+    else{
+        imagen.src = "./resources/sinEncriptar.png";
+        tituloMensaje.textContent = "Ningun mensaje encontrado";
+        parrafo.textContent = "Ingrese el texto que deseas encriptar o desencriptar";
+        alert("Debes ingresar un texto");
+    }
 }

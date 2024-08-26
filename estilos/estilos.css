@@ -7,7 +7,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: white;
+    background: #CED4DA
 }
 
 .texto {
@@ -20,13 +20,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 27px;
     line-height: 150%;
-    background-color: white;
+    background-color:#ADB5BD;
 }
 
 .texto::placeholder {
-    color: rgb(99, 99, 173);
+    color: #343A40;
 
 }
 
@@ -69,9 +69,10 @@
     align-items: flex-start;
     padding: 1% 0;
     position: absolute;
-    width: 80%;
+    width: 70%;
     left: 10%;
     top: 82%;
+    gap: 20px;
 }
 
 .btn-cifrar {
@@ -80,29 +81,30 @@
     padding: 3%;
     gap: 8px;
     width: 25%;
-    background-color: #0a3871;
+    background-color: #343A40;
     border-radius: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: white
+    color: white;
+    border: 1px solid #343A40;
 }
 
 .btn-descifrar {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     padding: 3%;
     gap: 8px;
     width: 25%;
-    background-color: #0a3871;
-    border: 1px solid #0a3871;
+    background-color: #495057;
     border-radius: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #343A40;
+    font-size: 16px;
     font-weight: 400;
     text-align: center;
     line-height: 19px;
@@ -111,9 +113,9 @@
 }
 
 .btn-cifrar:hover, .btn-descifrar:hover {
-    margin: 0.3%;
-    width: 24.5%;
-    padding: 1.8%;
+    margin: 0.4%;
+    width: 24.7%;
+    padding: 3.0%;
 }
 
 .encriptado {
@@ -124,7 +126,7 @@
     height: 90%;
     left: 60%;
     top: 5%;
-    background: white;
+    background-color:#ADB5BD;
     box-shadow: 0px 24px 32px -8px;
     border-radius: 32px;
 }
@@ -150,6 +152,7 @@
     font-size: 24px;
     line-height: 120%;
     text-align: center;
+    color: #343A40;
 }
 
 .mensaje-encriptado p {
@@ -160,6 +163,7 @@
     font-size: 16px;
     line-height: 150%;
     text-align: center;
+    color: #343A40;
 }
 
 .encriptado img {
@@ -167,6 +171,11 @@
     width: 80%;
     height: 50%;
     top: 15%;
+}
+
+.imagen {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
 }
 
 @media (max-width: 57.5em) {
@@ -188,7 +197,7 @@
     .terminos {
         width: 80%;
         left: 10%;
-        top: 65%;
+        top: 67%;
     }
 
     .terminos p {
@@ -198,24 +207,19 @@
     .botones{
         width: 80%;
         left: 10%;
-        top: 70%
+        top: 70%;
+        gap: 20px;
     }
 
-    .btn-encriptar, .btn-desencriptar {
-        width: 48%;
+    .btn-cifrar, .btn-descifrar {
+        width: 50%;
         border-radius: 16px;
     }
-    .btn-encriptar:hover, .btn-desencriptar:hover {
+
+    .btn-cifrar:hover, .btn-descifrar:hover {
         margin: 0.3%;
         width: 47.5%;
         padding: 1.8%;
-    }
-
-    .resultado {
-        width: 80%;
-        height: 15%;
-        left: 10%;
-        top: 80%
     }
 
     .encriptado {
@@ -225,7 +229,7 @@
         top: 80%;
     }
 
-    .mensaje-c {
+    .mensaje-encriptado {
         width: 100%;
         top: 5%
     }
@@ -236,5 +240,81 @@
         visibility: hidden;
     }
 
+
+}
+
+@media (max-width: 47.5em) {
+    
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .encriptar {
+        width: 100%;
+    }
+
+    .texto{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top: 5%;
+        font-size: 12px;
+    }
+
+    .terminos {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .terminos p {
+        font-size: 10px;
+    }
+
+    .botones{
+        width: 80%;
+        left: 10%;
+        top: 70%;
+        gap: 20px;
+    }
+
+    .btn-cifrar, .btn-descifrar {
+        width: 50%;
+        border-radius: 16px;
+        font-size: 11px;
+    }
+
+    .btn-cifrar:hover, .btn-descifrar:hover {
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+
+    .encriptado {
+        width: 80%;
+        height: 12%;
+        left: 10%;
+        top: 80%;
+    }
+
+    .mensaje-encriptado {
+        width: 100%;
+        top: 5%;
+    }
+
+    .mensaje-encriptado h2 {
+        font-size: 12px;
+    }
+
+    .mensaje-encriptado p{
+        font-size: 10px;
+    }
+
+    .encriptado img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
 
 }
